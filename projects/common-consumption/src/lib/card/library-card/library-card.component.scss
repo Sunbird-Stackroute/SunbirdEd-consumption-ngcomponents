@@ -76,10 +76,18 @@
 
     &__title {
       color: var(--primary-color);
-      font-size: calculateRem(18px);
+      // font-size: calculateRem(18px);
       margin: 0px;
-      line-height: normal;
-      line-height: calculateRem(20px);
+      // line-height: normal;
+      // line-height: calculateRem(20px);
+
+      font-style: normal;
+      font-weight: 400;
+      font-size: 13px!important;
+      line-height: 22px;
+      color: #42428b!important;
+  font-family: Montserrat!important;
+
     }
 
     &__meta1 {
@@ -126,17 +134,19 @@
       border-top: 0px solid #cacbce;
       margin-top: 196px;
       padding-left: 15px;
+      font-family: Montserrat!important;
     }
 
     &__meta2 {
       color: var(--gray-800);
-      font-size: calculateRem(12px);
+      // font-size: calculateRem(12px);
       line-height: calculateRem(14px);
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
       justify-content: space-around;
       // padding: calculateRem(8px);
+      font-size: 13px;
     }
 
     &__meta2_data {
