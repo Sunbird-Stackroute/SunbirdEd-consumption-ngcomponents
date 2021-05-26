@@ -2,8 +2,10 @@
 
 .sbchapter {
   &__item {
-    background: var(--white);
-    border: calculateRem(1px) solid var(--primary-300);
+    // background: var(--white);
+    background: #42428b !important;
+    color: white;
+    // border: calculateRem(1px) solid var(--primary-300);
     box-shadow: 0 calculateRem(3px) calculateRem(4px) 0 rgba(var(--rc-rgba-primary), 0.1);
     display: flex;
     align-items: center;
@@ -50,7 +52,7 @@
 .sbchapter__item__title{
   font-size: calculateRem(12px);
   line-height: calculateRem(20px);
-  color: var(--primary-400);
+  // color: var(--primary-400);
   margin: 0px;
   padding: 0px;
   font-weight: normal;
