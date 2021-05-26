@@ -33,7 +33,7 @@ export class LibraryCardsGridComponent {
     @Output() hoverActionClick: EventEmitter<any> = new EventEmitter<any>();
     @Output() menuClick: EventEmitter<ICardClick> = new EventEmitter();
 
-
+    allowIcon = false;
     get LibraryCardTypes() { return LibraryCardTypes; }
     get LibraryCardGridTypes() { return LibraryCardGridTypes; }
 
