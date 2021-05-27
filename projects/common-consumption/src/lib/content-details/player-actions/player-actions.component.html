@@ -3,11 +3,10 @@
     <button class="sb-btn sb-btn-link sb-btn-link-gray sb-btn-sm sb-btn-square"
       [class.sb-btn-link-disabled]="item?.disabled" [hidden]="item?.disabled" (click)="onButtonClick($event, item)">
       <i class="icon-svg icon-svg--sm icon-back">
-        <svg class="icon icon-svg--primary">
+        <svg class="icon icon-svg--primary svg-icon-clr">
           <use [attr.xlink:href]="item?.iconPath"></use>
         </svg>
       </i>
-
       <span class="fxsmall title-clr">{{item?.label}}</span>
     </button>
   </div>
@@ -18,11 +17,10 @@
       [class.sb-btn-link-disabled]="fullscreenButton?.disabled" [hidden]="fullscreenButton?.disabled"
       (click)="onButtonClick($event, fullscreenButton)">
       <i class="icon-svg icon-svg--sm icon-back">
-        <svg class="icon icon-svg--primary">
+        <svg class="icon icon-svg--primary svg-icon-clr">
           <use [attr.xlink:href]="fullscreenButton?.iconPath"></use>
         </svg>
       </i>
-
       <span class="fxsmall title-clr">{{fullscreenButton?.label}}</span>
     </button>
   </div>
