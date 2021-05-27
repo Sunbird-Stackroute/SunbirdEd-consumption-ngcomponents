@@ -39,8 +39,11 @@
         }
       }
     }
-    &:hover,&--active, &--active:hover {
-      background: var(--primary-100);
+    // &:hover,&--active, &--active:hover {
+    //   background: var(--primary-100);
+    // }
+    &:hover,&--active{
+      background: rgba(66,66,139,.64)!important;
     }
     &--active {
       .sbchapter__item__title {
