@@ -1,5 +1,5 @@
 <!-- For card type textbook -->
-<div *ngIf="type === TocCardType.TEXTBOOK">
+<div *ngIf="type === TocCardType.TEXTBOOK" class="border-btm-white">
   <div class="sbchapter__item" (click)="onTocCardClick($event)"
     [ngClass]="{'sbchapter__item--active': activeContent?.sbUniqueIdentifier === content?.sbUniqueIdentifier}">
     <h4 class="sbchapter__item__title sbchapter__item__title text-left sb__ellipsis sb__ellipsis--two mr-8" title="{{content?.name}}">
@@ -12,7 +12,7 @@
 </div>
 
 <!-- For card type TRACKABLE -->
-<div *ngIf="type === TocCardType.TRACKABLE">
+<div *ngIf="type === TocCardType.TRACKABLE" class="border-btm-white">
   <div class="sbchapter__item" [ngClass]="{'sb-card-swap': swapCard(content)}" (click)="onTocCardClick($event)"
     [ngClass]="{'sbchapter__item--active': activeContent?.sbUniqueIdentifier === content?.sbUniqueIdentifier}">
     <div class="relative">
@@ -40,7 +40,7 @@
 </div>
 
 <!-- For card type course -->
-<div *ngIf="type === TocCardType.COURSE">
+<div *ngIf="type === TocCardType.COURSE" class="border-btm-white">
   <div class="sbchapter__item"  (click)="onTocCardClick($event)"
   [ngClass]="[(activeContent?.sbUniqueIdentifier === content?.sbUniqueIdentifier) ? 'sbchapter__item--active': '', isDisabled ? disabled: '']">
   <div class="sbchapter__img background-transparent" [ngClass]="{'sbchapter__img--inprogress':isContentStarted}">
@@ -64,7 +64,7 @@
 </div>
 
 <!-- For card type NON TRACKABLE -->
-<div *ngIf="type === TocCardType.NON_TRACKABLE">
+<div *ngIf="type === TocCardType.NON_TRACKABLE" class="border-btm-white">
   <div class="sbchapter__item"  (click)="onTocCardClick($event)"
     [ngClass]="[(activeContent?.sbUniqueIdentifier === content?.sbUniqueIdentifier) ? 'sbchapter__item--active': '', isDisabled ? disabled: '']">
     <div class="sbchapter__img background-transparent" [ngClass]="{'sbchapter__img--inprogress':isContentStarted}">
