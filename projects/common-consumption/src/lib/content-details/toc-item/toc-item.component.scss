@@ -134,6 +134,10 @@
     padding: 0px;
   }
   .sb-content__bar {
-    margin: calculateRem(8px) 0; 
+    // margin: calculateRem(8px) 0; 
+    margin-top: 1px;
     background: var(--gray-0);
+  }
+  .accordian-margin{
+    margin-top: 4px;
   }
