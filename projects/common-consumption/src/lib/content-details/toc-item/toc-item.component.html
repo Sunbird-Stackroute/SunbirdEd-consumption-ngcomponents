@@ -63,7 +63,7 @@
     </sb-accordion>
   </div>
   <div *ngIf="(item?.mimeType !== MimeTypeMasterData?.COLLECTION && !item?.children?.length) ||
-    item?.contentData?.trackable?.enabled === 'Yes' || item?.trackable?.enabled === 'Yes'" class="sb-content__bar">
+    item?.contentData?.trackable?.enabled === 'Yes' || item?.trackable?.enabled === 'Yes'">
     <ng-container>
     <div class="child-content-padding">
       <sb-toc-card *ngIf="type" [type]="type" [contentStatus]="contentStatus" [content]="item"
