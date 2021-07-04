@@ -2,10 +2,10 @@
 
 .sbaccordion {
     &__panel-content {
-      border: calculateRem(1px) solid var(--primary-300);
-      background: var(--gray-0);
+      // border: calculateRem(1px) solid var(--primary-300);
+      // background: var(--gray-0);
       min-height: calculateRem(32px);
-      padding:calculateRem(16px);
+      // padding:calculateRem(16px);
       overflow: hidden;
       overflow-y: auto;
       max-height: 60vh;

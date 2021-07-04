@@ -1,20 +1,21 @@
-import { Component, Input, Output, EventEmitter, TemplateRef } from '@angular/core';
+import { Component, OnInit, Input, Output, TemplateRef, EventEmitter } from '@angular/core';
 import { defaultLibraryCardsGrid } from '../library-cards.data';
-import { IContent, LibraryCardTypes, LibraryCardGridTypes } from '../../card/models';
+import { IContent, LibraryCardTypes, CardGridTypes } from '../../card/models';
 import { IViewMoreClick, ICardClick } from '../models';
 
 @Component({
-    selector: 'sb-library-cards-grid',
-    templateUrl: './library-cards-grid.component.html',
-    styleUrls: ['./library-cards-grid.component.scss']
+    selector: 'sb-cards-grid',
+    templateUrl: './cards-grid.component.html',
+    styleUrls: ['./cards-grid.component.scss', '../library-cards-grid/library-cards-grid.component.scss']
 })
-export class LibraryCardsGridComponent {
+export class CardsGridComponent {
 
     /* Title for the grid */
     @Input() title: string = defaultLibraryCardsGrid.title;
-    @Input() contentList: Array<IContent|any> = defaultLibraryCardsGrid.contentList;
-    @Input() type: LibraryCardGridTypes;
+    @Input() contentList: Array<IContent> | any = defaultLibraryCardsGrid.contentList;
+    @Input() type: CardGridTypes;
     @Input() hoverData = [];
+    @Input() cardType: String = "textbook";
 
     @Input() layoutConfig: any;
 
@@ -23,19 +24,17 @@ export class LibraryCardsGridComponent {
     @Input() viewMoreButtonText = defaultLibraryCardsGrid.viewMoreButtonText;
     @Input('hover-template') gridTemplate: TemplateRef<any>;
 
-    @Input() isLoading:boolean;
-
-    /* Show Menu on each card */
-    @Input() isMenu = false;
+    @Input() isLoading: boolean;
+    @Input() isMenu: boolean = false;
 
     @Output() viewMoreClick: EventEmitter<IViewMoreClick> = new EventEmitter<IViewMoreClick>();
+    @Output() menuClick: EventEmitter<IViewMoreClick> = new EventEmitter<IViewMoreClick>();
     @Output() cardClick: EventEmitter<ICardClick> = new EventEmitter<ICardClick>();
     @Output() hoverActionClick: EventEmitter<any> = new EventEmitter<any>();
-    @Output() menuClick: EventEmitter<ICardClick> = new EventEmitter();
 
-    allowIcon = false;
+
     get LibraryCardTypes() { return LibraryCardTypes; }
-    get LibraryCardGridTypes() { return LibraryCardGridTypes; }
+    get CardGridTypes() { return CardGridTypes; }
 
     /**
      * Triggers event on `View More` Click
@@ -53,14 +52,15 @@ export class LibraryCardsGridComponent {
     onCardClick(event: MouseEvent, data: IContent) {
         this.cardClick.emit({ event, data });
     }
+    onMenuClick(event: MouseEvent, data: IContent) {
+        this.menuClick.emit({ event, data });
+    }
 
     hoverActionClicked(event) {
         this.hoverActionClick.emit(event);
     }
     range(maxCardCounter) {
-        return  new Array(maxCardCounter);
+        return new Array(maxCardCounter);
     }
-    onCardMenuClick(event) {
-        this.menuClick.emit(event);
-    }
+
 }

@@ -25,7 +25,7 @@ export class TocCardComponent implements OnInit, OnChanges {
 
   fallbackImg = COMMON_CONSUMPTION_CONSTANTS.TOC_CARD_FALLBACK_IMG;
   iconPathMap: any;
-  isContentStarted  = false;
+  isContentStarted = false;
   isCourseCompleted = false;
   bestScoreLabel: string;
   isLastAttempt: boolean = false;
@@ -91,14 +91,14 @@ export class TocCardComponent implements OnInit, OnChanges {
     }));
 
     if (this.isCourseCompleted) {
-      this.content.appIcon = 'assets/common-consumption/images/sprite.svg#circle-with-check-symbol';
+      this.content.appIcon = 'assets/images/sprite.svg#circle-with-check-symbol';
     } else {
       this.iconPathMap = [
-        [mimeTypesData.COLLECTION, 'assets/common-consumption/images/sprite.svg#doc'],
-        [mimeTypesData.VIDEO, 'assets/common-consumption/images/sprite.svg#play'],
-        [mimeTypesData.AUDIO, 'assets/common-consumption/images/sprite.svg#play'],
-        [mimeTypesData.INTERACTIVE, 'assets/common-consumption/images/sprite.svg#touch'],
-        [mimeTypesData.DOCS, 'assets/common-consumption/images/sprite.svg#doc'],
+        [mimeTypesData.COLLECTION, 'assets/images/sprite.svg#doc'],
+        [mimeTypesData.VIDEO, 'assets/images/sprite.svg#play'],
+        [mimeTypesData.AUDIO, 'assets/images/sprite.svg#play'],
+        [mimeTypesData.INTERACTIVE, 'assets/images/sprite.svg#touch'],
+        [mimeTypesData.DOCS, 'assets/images/sprite.svg#doc'],
       ];
       this.content.appIcon = this.getIconPath(this.content.mimeType);
     }
@@ -107,7 +107,7 @@ export class TocCardComponent implements OnInit, OnChanges {
   getBestScore() {
     this.contentStatus.forEach((item) => {
       if (item.contentId === this.content.identifier && item.bestScore && this.scoreLabel && this.maxAttempts) {
-        this.bestScoreLabel = this.scoreLabel + ' ' + (Math.round(item.bestScore.totalScore*100)/100).toString() + '/' + item.bestScore.totalMaxScore.toString();
+        this.bestScoreLabel = this.scoreLabel + ' ' + (Math.round(item.bestScore.totalScore * 100) / 100).toString() + '/' + item.bestScore.totalMaxScore.toString();
         if (this.maxAttempts - item.score.length === 1) {
           this.isLastAttempt = true;
           this.isDisabled = false;

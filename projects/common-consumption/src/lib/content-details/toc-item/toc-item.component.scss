@@ -3,8 +3,8 @@
   //sbchapter css
   .sbchapter {
     border-bottom: calculateRem(1px) solid var(--gray-100);
-    padding: calculateRem(0px) calculateRem(0px) calculateRem(16px) calculateRem(0px);
-    margin-bottom: calculateRem(16px);
+    // padding: calculateRem(0px) calculateRem(0px) calculateRem(16px) calculateRem(0px);
+    // margin-bottom: calculateRem(16px);
     &:last-child{
       border-bottom:0px;
       margin-bottom: 0px;
@@ -134,6 +134,10 @@
     padding: 0px;
   }
   .sb-content__bar {
-    margin: calculateRem(8px) 0; 
+    // margin: calculateRem(8px) 0; 
+    margin-top: 1px;
     background: var(--gray-0);
+  }
+  .accordian-margin{
+    margin-top: 4px;
   }
