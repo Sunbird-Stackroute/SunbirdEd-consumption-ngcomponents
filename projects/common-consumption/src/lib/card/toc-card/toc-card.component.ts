@@ -150,7 +150,6 @@ export class TocCardComponent implements OnInit, OnChanges {
     }
     return false;
   }
-
   getContentImage(content) {
     if (this.isTrackable(content) && this.trackableDefaultImage) {
       return this.trackableDefaultImage;
