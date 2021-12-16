@@ -83,7 +83,6 @@
     overflow: hidden;
     box-shadow: 0px 1px 6px 2px #9f9d9d !important;
     border-radius: 3px !important;
-
     .sb--card-svg-tail {
       position: absolute;
       bottom: 0px;
@@ -154,7 +153,8 @@
     }
 
     .sb--card__moreinfo {
-      background: var(--cc-sbcard-moreinfo-bg);
+      background: var(--white);
+      
     }
 
     .sb--card__info {

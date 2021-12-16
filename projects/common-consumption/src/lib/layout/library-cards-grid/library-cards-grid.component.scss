@@ -126,8 +126,10 @@
         max-width: 33.33%;
       }
       &.show-4 {
-        flex: 0 0 25%;
-        max-width: 25%;
+        // flex: 0 0 25%;
+        // max-width: 25%;
+        flex: 0 0 23%;
+        max-width: 23%;
       }
       &.show-5 {
         flex: 0 0 20%;
@@ -158,8 +160,8 @@
       @include respond-between(md, lg) {
           .item.show-4,
           .item.show-5 {
-            flex: 0 0 33.33%;
-            max-width: 33.33%;
+            flex: 0 0 23%;
+            max-width: 23%;
           }
         }
   }
