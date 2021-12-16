@@ -107,7 +107,8 @@
     // justify-content: space-between;
     margin: -1.5rem -.5rem 0 -.5rem;
     .item {
-      @include padding(0, calculateRem(8px), 0, calculateRem(8px));
+      // @include padding(0, calculateRem(8px), 0, calculateRem(8px));
+      padding: 0 1.5rem !important;
       box-sizing: border-box;
       margin-top: calculateRem(24px);
       @include respond-below(sm) {

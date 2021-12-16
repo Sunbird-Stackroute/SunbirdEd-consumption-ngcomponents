@@ -81,6 +81,8 @@
     border-radius: calculateRem(24px);
     box-shadow: var(--sbt-box-shadow-6px);
     overflow: hidden;
+    box-shadow: 0px 1px 6px 2px #9f9d9d !important;
+    border-radius: 3px !important;
 
     .sb--card-svg-tail {
       position: absolute;
@@ -99,7 +101,8 @@
     }
 
     .sb--card__svg-area {
-      height: calculateRem(72px);
+      // height: calculateRem(9px);
+      height: 10.625rem;
       width: 100%;
       border-radius: calculateRem(16px);
       overflow: hidden;
@@ -155,12 +158,12 @@
     }
 
     .sb--card__info {
-      padding: 0rem calculateRem(16px);
+      padding: 0rem  calculateRem(16px) 0;
     }
 
     .sb--card__title {
       margin-right: calculateRem(88px);
-
+      font-weight: bold !important;
       html[dir="rtl"] & {
         margin-left: calculateRem(88px);
         margin-right: 0px;
@@ -182,7 +185,7 @@
       .data_1,
       .data_2,.data_0 {
         border-radius: calculateRem(8px);
-        font-size: calculateRem(12px);
+        font-size: calculateRem(16px);
         padding: 0px calculateRem(8px);
         width: auto;
         flex: initial;
@@ -209,6 +212,12 @@
 
     .sb--card__meta2 {
       padding: calculateRem(8px) calculateRem(16px);
+      font-size: 15px !important;
+      line-height: 25px !important;
+      font-weight: bold;
+      position: absolute;
+      bottom: 10px;
+      left: 20px;
     }
 
     .sb--card__image-pos {
