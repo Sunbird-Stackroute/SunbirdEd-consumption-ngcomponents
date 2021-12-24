@@ -20,6 +20,8 @@
     height: calculateRem(56px);
     border-radius: calculateRem(4px);
     border: 0.5px solid var(--cc-accordion-panel-header-br);
+    border-radius: 8px !important;
+    background:red !important;
   }
 
   &__panel-header__title {
@@ -27,7 +29,8 @@
     font-size: calculateRem(14px);
     line-height:calculateRem(20px);
     font-weight: bold;
-    color: var(--cc-accordion-panel-header-title);
+    // color: var(--cc-accordion-panel-header-title);
+    color: white !important;
     margin: 0px;
     padding: 0px;
     width: 100%;

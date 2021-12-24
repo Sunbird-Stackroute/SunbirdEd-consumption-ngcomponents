@@ -13,11 +13,12 @@
   align-items: center;
   border: calculateRem(1px) solid transparent;
   position: relative;
-  &:hover,&.selectElement {
-    background-color: var(--cc-members-list-item-selected);
-    border: calculateRem(1px) solid var(--cc-members-list-item-selected-border);
-    cursor: pointer;
-  }
+  color:white !important;
+  // &:hover,&.selectElement {
+  //   background-color: var(--cc-members-list-item-selected);
+  //   border: calculateRem(1px) solid var(--cc-members-list-item-selected-border);
+  //   cursor: pointer;
+  // }
   .menu::after {
     content: '\2807';
     font-size: calculateRem(24px);

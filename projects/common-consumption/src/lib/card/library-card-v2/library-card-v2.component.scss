@@ -78,9 +78,12 @@
   }
 
   .sb--card.sb--card--theme2 {
-    border-radius: calculateRem(24px);
-    box-shadow: var(--sbt-box-shadow-6px);
+    // border-radius: calculateRem(24px);
+    // box-shadow: var(--sbt-box-shadow-6px);
+    // overflow: hidden;
     overflow: hidden;
+    box-shadow: 0px 1px 6px 2px #9f9d9d !important;
+    border-radius: 3px !important;
 
     .sb--card-svg-tail {
       position: absolute;
@@ -99,7 +102,8 @@
     }
 
     .sb--card__svg-area {
-      height: calculateRem(72px);
+      // height: calculateRem(72px);
+      height: 10.5rem !important;
       width: 100%;
       border-radius: calculateRem(16px);
       overflow: hidden;
@@ -209,6 +213,7 @@
 
     .sb--card__meta2 {
       padding: calculateRem(8px) calculateRem(16px);
+      
     }
 
     .sb--card__image-pos {
