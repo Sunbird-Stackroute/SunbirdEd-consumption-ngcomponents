@@ -2,7 +2,7 @@
 <div class="sb--card sb--card--theme2" role="link" tabindex="0"
   [ngClass]="{'sb--card--recently-viewed': type === LibraryCardTypes.RECENTLY_VIEWED, 'offline': isOffline, 'selected': isSelected}"
   (click)="onClick($event)" *ngIf="!isLoading">
-  <svg width="79px" class="sb--card-svg-tail" height="36px" viewBox="0 0 79 36" version="1.1"
+  <!-- <svg width="79px" class="sb--card-svg-tail" height="36px" viewBox="0 0 79 36" version="1.1"
     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
       <g class="sb--card-svg-tail__rc" transform="translate(-735.000000, -524.000000)">
@@ -15,7 +15,7 @@
         </g>
       </g>
     </g>
-  </svg>
+  </svg> -->
   <div class="sb--card__main-area">
     <!-- card img -->
     <div [ngClass]="getClassForImage()">
@@ -36,8 +36,8 @@
         <bdi>{{content?.name}}</bdi></h4>
       <a *ngIf="isMenu" role="button" aria-label="View more actions menu" class="menu" (click)="onMenuClick($event);$event.stopPropagation()"></a>
     </div>
-    <div class="sb--card__meta1 text-left">
-      <ng-container *ngIf="content?.organisation && content?.organisation.length > 0">
+    <!-- <div class="sb--card__meta1 text-left">
+      <ng-container *ngIf="content?.organisation && content?.organisation.length > 0 ">
         <span class="data_0 mr-8 organisation" title="{{content?.organisation[0]}}">{{content?.organisation[0]}}</span>
         <span class="data_0 mr-8" title="{{content?.organisation}}" *ngIf="content?.organisation.length > 1">+{{content?.organisation.length-1}}</span>
       </ng-container>
@@ -49,14 +49,14 @@
         <span class="data_2" title="{{content?.gradeLevel[0]}}">{{content?.gradeLevel[0]}}</span>
         <span class="data_2" title="{{content?.gradeLevel}}" *ngIf="content?.gradeLevel.length > 1">+{{content?.gradeLevel.length-1}}</span>
       </ng-container>
-    </div>
+    </div> -->
   </div>
   <!-- content for only desktop -->
   <div *ngIf="type === LibraryCardTypes.DESKTOP_TEXTBOOK || type === LibraryCardTypes.PORTAL_QRCODE_FLATRESULT">
     <div class="sb--card__moreinfo">
       <!-- other meta info subject, publisher/organizer etc -->
-      <div class="sb--card__meta2 text-left">
-        <ng-container *ngIf="content?.subject && content?.subject.length > 0">
+      <!-- <div class="sb--card__meta2 text-left"> -->
+        <!-- <ng-container *ngIf="content?.subject && content?.subject.length > 0">
           <div class="sb--card__meta2_data sb__ellipsis subject">
             <span>Subject: </span> <span title="{{content?.subject[0]}}">{{content?.subject[0]}}</span> <span class="data_1 mr-8" title="{{content?.subject}}" *ngIf="content?.subject.length > 1"> +{{content?.subject.length-1}}
             </span>
@@ -68,12 +68,12 @@
             <span class="data_1 mr-8" title="{{content?.organisation}}" *ngIf="content?.organisation.length > 1"> +{{content?.organisation.length-1}}
             </span>
           </div>
-        </ng-container>
+        </ng-container> -->
         <!-- <div class="sb--card__meta2_data sb__ellipsis" title="{{moreInfoLabel}}:
         {{content?.subject}}" *ngIf="content?.subject"><span class="">{{moreInfoLabel}}:
             {{content?.subject}}</span></div> -->
         <!-- <div class="sb--card__org sb__ellipsis" title="{{content?.organisation}}" *ngIf="content?.organisation"><bdi>{{content?.organisation}}</bdi></div> -->
-      </div>
+      <!-- </div> -->
       <!-- other meta info Badge and card category Book, learn, practice -->
       <div class="sb--card__tags">
         <span class="sb--card__badge" *ngIf="content?.badgeAssertions"><img

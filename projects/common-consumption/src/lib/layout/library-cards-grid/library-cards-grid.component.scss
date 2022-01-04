@@ -111,6 +111,9 @@
       padding-right: 30px !important;
       box-sizing: border-box;
       margin-top: calculateRem(24px);
+      &:last-child {
+      padding-right:0 !important;
+      }
       @include respond-below(sm) {
         margin-top: calculateRem(16px);
       }

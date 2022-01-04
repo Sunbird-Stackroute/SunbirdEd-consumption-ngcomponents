@@ -45,6 +45,9 @@
   .accordion-item-header-expanded .sbaccordion__panel-header {
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
+    .chevron-down{
+      transform: rotate(180deg);
+    }
   }
 }
 
