@@ -1,33 +1,30 @@
-<!----card changess-->
+<!----card changes-->
 
 <div class="row" (click)="onClick($event)" *ngIf="!isLoading">
-    <div class="col-xs-12 col-sm-4 col-md-3">
-        <div class="crsCntWraper">
-            <div class="crsCntinner" [ngClass]="getClassForImage()">
-                <div class="imgWrap">
-                    <img [src]="cardImg" alt="">
-                    <div class="ribbon">
-                        <img src="/projects/common-consumption/src/lib/assets/images/badge-black.png"> 
-                    </div>
-                </div>
-                <div class="imDescription">
-                    <div class="row">
-                        <div class="col-xs-9 col-sm-9">
-                                <h2 class="course_title">
-                                    {{content?.name}}</h2>
-                                <p></p>
-                            </div>
-                        <div class="col-xs-3 col-sm-3 mType">
-                            <!-- <img src="assets/images/play-arrow.png"> -->
-                            <img src="/projects/common-consumption/src/lib/assets/images/play-arrow.png">
-                        </div>
-                    </div>
-                    <div class="durInfo">
-                        <img src="/projects/common-consumption/src/lib/assets/images/duration.png"> 2 hrs.
-                        <span *ngIf="content?.contentType">{{content?.contentType}}</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+	<!-- <div class="col-xs-12 col-sm-4 col-md-3"> -->
+		<div class="crsCntWraper">
+			<div class="crsCntinner" [ngClass]="getClassForImage()">
+				<div class="imgWrap">
+					<img [src]="cardImg" alt="">
+					<div class="ribbon">
+						<img src="assets/images/badge-black.png">
+					</div>
+				</div>
+				<div class="imDescription">
+					<div class="row">
+						<!-- <div class="col-xs-9 col-sm-9"> -->
+							<h2 class="course_title">
+								{{content?.name}}
+							</h2>
+							<img src="assets/images/duration.png"> 2 hrs.
+						<!-- </div> -->
+					</div>
+					<div>
+						<img src="assets/images/duration.png">
+						<!-- <span *ngIf="content?.contentType">{{content?.contentType}}</span> -->
+					</div>
+				</div>
+			</div>
+		</div>
+	<!-- </div> -->
 </div>
