@@ -27,6 +27,7 @@ export class LibraryCardComponent implements OnInit, AfterViewInit {
     @Output() cardClick: EventEmitter<ICardClick> = new EventEmitter();
     @Output() menuClick: EventEmitter<ICardClick> = new EventEmitter();
 
+    showContentTypes: string = localStorage.getItem('showContentTypes') || 'Course';
     get LibraryCardTypes() { return LibraryCardTypes; }
 
     ngOnInit() {

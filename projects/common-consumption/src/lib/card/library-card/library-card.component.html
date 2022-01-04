@@ -110,13 +110,22 @@
   </div>
 </span>
 <span *ngIf="layoutConfig">
+
+  <!-- <ng-container *ngIf="(layoutConfig && !layoutConfig.layout && showContentTypes === 'Course') || layoutConfig.layout === 'v2' && showContentTypes === 'Course'">
+    <sb-library-card-v5  [isLoading]="isLoading"  [type]="type" [content]="content" [cardImg]="cardImg" [layoutConfig]="layoutConfig" (cardClick)="onClick($event)"></sb-library-card-v5>
+  </ng-container>
+
+  <ng-container *ngIf="(layoutConfig && !layoutConfig.layout && showContentTypes === 'Learning Resource') || layoutConfig.layout === 'v2' && showContentTypes === 'Learning Resource'">
+    <sb-library-card-v6  [isLoading]="isLoading"  [type]="type" [content]="content" [cardImg]="cardImg" [layoutConfig]="layoutConfig" (cardClick)="onClick($event)"></sb-library-card-v6>
+  </ng-container> -->
     <ng-container *ngIf="(layoutConfig && !layoutConfig.layout) || layoutConfig.layout === 'v2'">
-      <sb-library-card-v2 [indexToDisplay]="indexToDisplay" [isLoading]="isLoading" [content]="content" [isMobile]="isMobile"
+      <!-- <sb-library-card-v2 [indexToDisplay]="indexToDisplay" [isLoading]="isLoading" [content]="content" [isMobile]="isMobile"
       [isOffline]="isOffline" [cardImg]="cardImg" [type]="type" [moreInfoLabel]="moreInfoLabel" [isSelected]="isSelected"
       [section]="section" [btnlabel]="btnlabel" [btnicon]="btnicon"
       [layoutConfig]="layoutConfig" [isMenu]="isMenu" (cardClick)="onClick($event)" 
       (menuClick)="onMenuClick($event);$event.stopPropagation()" [hover-template]="gridTemplate"
-      ></sb-library-card-v2>
+      ></sb-library-card-v2> -->
+      <sb-library-card-v5  [isLoading]="isLoading"  [type]="type" [content]="content" [cardImg]="cardImg" [layoutConfig]="layoutConfig" (cardClick)="onClick($event)"></sb-library-card-v5>
     </ng-container>
     <ng-container *ngIf="layoutConfig.layout === 'v3'">
       <sb-library-card-v3 [indexToDisplay]="indexToDisplay" [isLoading]="isLoading" [content]="content" [isMobile]="isMobile"

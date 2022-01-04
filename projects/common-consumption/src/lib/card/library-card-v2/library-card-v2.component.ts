@@ -54,11 +54,10 @@ export class LibraryCardV2Component implements OnInit, AfterViewInit {
 
     getClassForImage() {
         if(this.layoutConfig!=null && this.layoutConfig.cardImgStyle != null) {
-            return "sb--card__img sb--card__image-pos-"+this.layoutConfig.cardImgStyle;
+            return 'sb--card__img sb--card__image-pos-'+this.layoutConfig.cardImgStyle;
         } else {
             return "sb--card__img sb--card__image-pos";
         }
-       
     }
     fetchSvg() {
         var indexToDisplay = this.indexToDisplay!=null ? (this.indexToDisplay % 9)+1:2;
