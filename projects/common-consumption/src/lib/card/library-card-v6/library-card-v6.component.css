@@ -14,6 +14,10 @@
     box-shadow: 0px 1px 6px 2px #9f9d9d;
     border-radius: 3px;
     /* height: 330px; */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    text-align: start;
 }
 
 .imgWrap {
@@ -51,8 +55,10 @@ a {
 }
 .imDescription {
     min-height: 100px;
-    padding: 10px;
-    height: 140px;
+		padding: 5px 24px;
+    /* height: 140px; */
+		display: flex;
+    justify-content: space-between;
 }
 
 .course_title {
