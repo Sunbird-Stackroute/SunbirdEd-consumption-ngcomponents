@@ -1,13 +1,12 @@
 <!----card changess-->
-
 <div class="row" (click)="onClick($event)" *ngIf="!isLoading">
     <div class="col-xs-12 col-sm-4 col-md-3">
         <div class="crsCntWraper">
-            <div class="crsCntinner" [ngClass]="getClassForImage()">
+            <div class="crsCntinner">
                 <div class="imgWrap">
                     <img [src]="cardImg" alt="">
                     <div class="ribbon">
-                        <img src="/projects/common-consumption/src/lib/assets/images/badge-black.png"> 
+                        <img src="assets/images/badge-black.png">
                     </div>
                 </div>
                 <div class="imDescription">
@@ -18,12 +17,11 @@
                                 <p></p>
                             </div>
                         <div class="col-xs-3 col-sm-3 mType">
-                            <!-- <img src="assets/images/play-arrow.png"> -->
-                            <img src="/projects/common-consumption/src/lib/assets/images/play-arrow.png">
+                            <img src="assets/images/play-arrow.png">
                         </div>
                     </div>
                     <div class="durInfo">
-                        <img src="/projects/common-consumption/src/lib/assets/images/duration.png"> 2 hrs.
+                        <img src="assets/images/duration.png"> 2 hrs.
                         <span *ngIf="content?.contentType">{{content?.contentType}}</span>
                     </div>
                 </div>

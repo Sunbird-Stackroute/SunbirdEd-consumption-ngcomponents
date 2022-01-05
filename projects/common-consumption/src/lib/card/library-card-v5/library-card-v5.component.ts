@@ -12,6 +12,7 @@ export class LibraryCardV5Component implements OnInit, AfterViewInit {
   @Input() isLoading: boolean;
   @Input() layoutConfig: any;
   @Input() cardImg = '';
+  @Input() contentStatus = [];
   @Input() type: LibraryCardTypes = LibraryCardTypes.DESKTOP_TEXTBOOK;
   constructor() { }
   ngOnInit(): void {

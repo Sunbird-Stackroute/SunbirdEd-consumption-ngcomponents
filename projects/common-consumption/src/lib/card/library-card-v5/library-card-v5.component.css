@@ -59,7 +59,10 @@ a {
     font-size: 18px;
     color: red;
 }
-
+.imDescription .mType {
+    justify-content: flex-end;
+    display: flex;
+}
 .imDescription .mType img {
     display: inline;
     cursor: pointer;
